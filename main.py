@@ -7,11 +7,11 @@ from router import router as tasks_router
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await delete_tables()
-    print("БАЗА ОЧИ")
+    print("База очищена")
     await create_tables()
-    print("БАЗА ГОТОВ")
+    print("База готова к работе")
     yield
-    print("ВЫКЛ")
+    print("Выключение")
 
 
 app = FastAPI(lifespan=lifespan)
