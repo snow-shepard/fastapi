@@ -11,7 +11,7 @@ class Model(DeclarativeBase):
 
 
 class TaskOrm(Model):
-    __tablename__ = "task"
+    __tablename__ = "tasks"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str]
